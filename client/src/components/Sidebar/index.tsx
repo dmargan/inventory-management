@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useAppDispatch, useAppSelector } from "@/redux";
 import { setIsSidebarCollapsed } from "@/state";
@@ -79,7 +80,13 @@ const Sidebar = () => {
           isSidebarCollapsed ? "px-5" : "px-8"
         }`}
       >
-        <div>Logo</div>
+        <Image
+          src="https://s3-marcom.s3.eu-central-1.amazonaws.com/logo.png"
+          alt="Logo"
+          width={27}
+          height={27}
+          className="rounded w-8"
+        />
         <h1
           className={`${
             isSidebarCollapsed ? "hidden" : "block"
